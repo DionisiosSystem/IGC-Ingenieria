@@ -1,0 +1,152 @@
+
+/*ESTILOS GENERALES*/
+body{
+    color: #FFFF00;
+    background: #C0C0C0;
+}
+h1,h3,h5{
+    text-align: center;
+    margin:0;
+    padding: 20px;
+}
+
+h2,h4,h6{
+    margin: 0;
+    padding: 10px;
+}
+
+.header{
+    background:#053c5a;   
+}
+
+.sidebar1{
+    background:#bdb7bd;
+}
+
+.sidebar2{
+    background:#CD5C5C;
+}
+
+.contenido{
+    background:#00FF00;
+}
+
+.aside {
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    float: left;
+    font-style: italic;
+    background-color: lightgray;
+}
+
+aside {
+  width: 30%;
+  padding: 20px;
+  margin: 20px;
+  float: left;
+  font-style: italic;
+  background-color: lightgray;
+ 
+}
+
+.centrado{
+    text-align: center!important;
+}
+
+.contenedor_principal{  
+    margin-bottom: -10px;
+}
+.externo{
+    text-align: center;
+    background:#808080;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* LETRAS - COLOR*/
+.colorNav{
+    background-color: #d6c712;
+}
+
+.letrasNegras{
+    color:black;
+}
+
+.letraBlanca{
+    color:white;
+}
+
+.letraAzul{
+    color:blue;
+}
+
+
+/* TAMAÑOS */
+.margenesSeccion{
+    border-radius: 10%;
+
+}
+
+.anchoFormControl{
+  width: 100%!important;
+}
+
+.cuerpoFormulario{
+  width: 20%!important;
+}
+
+.tamañoClientes{
+  width: 70%!important;
+  height: 90%!important;
+}
+
+.anchoCompleto{
+  width:100%;
+}
+
+.tamañoTarjetas{
+  width: 50%;
+  height: 70%;
+}
+
+.imagen:hover {
+  filter: grayscale(80%);
+}
+
+.imagenQuienesSomos{
+  width: 70%;
+  height: 70%;
+}
+
+.imagenObrasCiviles{
+  width: 100%;
+  height: 90%;
+}
+
+.margenIndex{
+  margin: 15px;
+}
+
+.widthMedio{
+  width: 50%;
+}
+
+.imgCard{
+  width:70%;
+  height: 90%;
+}
+
+/* FOOTER */
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; 
+  background: #C0C0C0;
+  color: white;
+  text-align: center;
+}
+.margenFooter{
+  margin: 15px;
+}

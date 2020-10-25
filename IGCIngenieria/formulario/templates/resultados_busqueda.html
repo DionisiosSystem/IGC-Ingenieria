@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>resultado busquedas</title>
+</head>
+<body>
+<p> Estas buscando : <strong> {{query}} </strong>
+</p>
+
+{% if nomUsuario %}
+    <p> Usuario encontrado: {{usuarios|length}} nomUsuario</p>
+
+    <ul>
+        {% for nomUsuario in nomUsuario }
+            <li>
+                {{Usuario.Nombre}}
+
+            </li>
+        {% endfor$}
+    </ul>
+{% else %}
+
+    <p>  no existe el usuario </p>
+
+{{% endif %}}
+
+</body>
+</html>

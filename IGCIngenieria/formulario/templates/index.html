@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Titulo Página -->
+        <title>IGC Ingeniería</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- **Importaciones** --> 
+
+        <!-- Jquery -->
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Estilos -->
+       <link href="/static/css/estilos.css">
+
+
+        <!-- Bootstrap 4-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--FontAwesome-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+         <!-- Toastr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+        <!--Funciones Jquery-->
+          <script type="text/javascript">           
+          $(document).ready(function() {
+            toastr.success("BIENVENIDO A IGC INGENIERÍA!!");            
+          });
+         </script>      
+    </head>
+    <body>
+        
+        <!-- ***CABECERA*** -->
+        <div class="contenedor_principal" >
+            <header class="row">
+                <div class="col-xs-12 col-lg-12">
+                    <div class="header">
+                        <h1 class="letraBlanca"> IGC Ingeniería Spa </h1>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <!-- ***MENU(NAV)***  -->
+        <nav class="navbar navbar-expand-sm  colorNav" >  
+            <!-- Hamburguesa Menu Responsivo -->           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars"></i></span></button>
+            <!-- Links Menu -->
+            <div class="collapse navbar-collapse" id="menu">      
+                <ul class="navbar-nav " >
+                  <li class="nav-item">
+                    <a class="nav-link letrasNegras" href="#" >Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link letrasNegras" href="QuienesSomos.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle letrasNegras" href="#" id="navbardrop" data-toggle="dropdown">
+                      Servicios
+                    </a>
+                    <!-- Submenu -->
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item letrasNegras" href="obrasCiviles.html">Obras Civiles</a>
+                      <a class="dropdown-item letrasNegras" href="obrasMenores.html">Servicios Obras menores</a>
+                    </div>
+                  </li>          
+                    <li class="nav-item">
+                    <a class="nav-link letrasNegras" href="clientes.html">Clientes</a>
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link letrasNegras" href="contacto.html">Contactos</a>
+                  </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ***CUERPO***  -->
+        <div class="row">
+          <div class="col-xs-12 col-lg-12">
+              <div class=" text-center">
+                  <h4><b> SOMOS IGC Ingeniería SPA</b></h4>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-lg-12">                     
+              <div class="container">
+                <!-- Carrusel -->
+                <div id="demo" class="carousel slide" data-ride="carousel">                    
+                      <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>                      
+                      </ul>
+
+                      <!-- Imagenes Carrusel -->
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="https://cydersa.com/img/cms/205223-Herlea-Construcciones-S-R-L-banner.png" class="anchoCompleto" alt="Ingeniería">                       
+                        </div>                    
+                        <div class="carousel-item">
+                          <img src="http://www.hmingenieria.com/wp-content/uploads/2015/11/banner-servicios.jpg" class="anchoCompleto" alt="Obras Civiles">
+                        </div>
+                      </div>
+
+                      <!-- Controles Carrusel -->
+                      <a class="carousel-control-prev" href="#" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                      </a>
+                      <a class="carousel-control-next" href="#" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                      </a>
+                </div>
+             </div>                      
+          </div>
+        </div><br> 
+        <!-- Sección Tarjetas con comentario -->                 
+        <div class="row centrado">
+          <div class="col-xs-12 col-lg-4">
+            <img src="https://www.uchile.cl/image/f4973-0-G.jpeg" class="margenesSeccion tamañoTarjetas">
+             <p class="margenIndex"> 
+                  Desarrollamos proyectos, planes de Mantenimiento y servicios planificando conjuntamente con nuestros clientes.
+              </p>
+          </div> 
+          <div class="col-xs-12 col-lg-4">
+            <img src="http://www.seind.com.ar/images/nosotros1.jpg" class="margenesSeccion tamañoTarjetas">
+            <p class="margenIndex"> 
+                  Ejecutamos planes de Mantenimiento y servicios con especialistas asegurando la calidad de cada servicio.
+              </p>
+
+          </div>
+          <div class="col-xs-12 col-lg-4">
+            <img src="https://www.semant.cl/wp-content/uploads/2019/04/obras-civiles-1-550x400.jpg" class="margenesSeccion tamañoTarjetas">    
+            <p class="margenIndex"> 
+                  Ponemos en marcha los sueños de cada cliente,como si fueran nuestros.
+              </p>               
+          </div>                                    
+        </div>       
+        <br><br><br><br>
+
+        <!-- *** FOOTER ***-->
+        <footer class="row">
+          <div class="col-xs-12 col-lg-6">
+              <div class="footer">
+                   <p class="margenFooter">  © 2020 IGC INGENIERÍA Spa  Fono +56-41269409 Email proyecIGC@gmail.com  by Dionisio System SA </p>
+              </div>
+          </div>
+        </footer>             
+   </body>
+</html>

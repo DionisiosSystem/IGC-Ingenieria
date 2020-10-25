@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Titulo Página -->
+        <title>IGC Ingeniería</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- **Importaciones** --> 
+
+        <!-- Jquery -->
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="/static/css/estilos.css">
+
+        <!-- Bootstrap 4-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--FontAwesome-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+         <!-- Toastr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    </head>
+    <body>
+
+        <!-- ** CABECERA ** -->
+      <div class="contenedor_principal" >
+        <header class="row">  
+            <div class="col-xs-12 col-lg-12">
+                <div class="header">
+                    <h1 class="letraBlanca"> IGC Ingeniería Spa </h1>
+                </div>
+            </div>
+        </header>
+      </div>
+
+      <!-- ***MENU(NAV)***  -->
+      <nav class="navbar navbar-expand-sm  colorNav" >  
+          <!-- Hamburguesa Menu Responsivo -->           
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
+                  aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars"></i></span></button>
+          <!-- Links Menu -->
+          <div class="collapse navbar-collapse" id="menu">      
+              <ul class="navbar-nav " >
+                <li class="nav-item">
+                  <a class="nav-link letrasNegras" href="index.html" >Inicio</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link letrasNegras" href="QuienesSomos.html">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle letrasNegras" href="#" id="navbardrop" data-toggle="dropdown">
+                    Servicios
+                  </a>
+                  <!-- Submenu -->
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item letrasNegras" href="obrasCiviles.html">Obras Civiles</a>
+                    <a class="dropdown-item letrasNegras" href="obrasMenores.html">Servicios Obras Menores</a>
+                  </div>
+                </li>          
+                  <li class="nav-item">
+                  <a class="nav-link letrasNegras" href="clientes.html">Clientes</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link letrasNegras" href="#">Contactos</a>
+                </li>
+              </ul>
+          </div>
+      </nav>
+
+      <!-- ***CUERPO***  -->
+      <div class="row">
+          <div class="col-xs-12 col-lg-12">
+              <div class=" text-center">
+                  <h2><b> CONTÁCTENOS </b></h2>
+              </div>
+          </div>
+      </div>
+      <div class="container widthMedio">
+        <div class="row">
+          <div class="col-xs-12 col-lg-12 text-center">
+            <h3> Comunicate con nosotros.</h3>
+              <p>
+                Cuentanos de ese proyecto que tienes en mente.<br>
+                queremos ser parte de la solución
+              </p>
+              <hr>
+              <!-- FORMULARIO -->
+              {% if resultado != '' %}
+                  <strong>{{resultado}}</strong>
+
+              {% endif %}
+
+             <form id ="form" action="/formulario/contacto/" method="post" class="text-left">
+                {% csrf_token %}
+                <label for="fname" >Nombre:</label><br>
+                <input type="text" id="fname" name="Nombre" required class="form-control anchoFormControl"><br>
+
+                <label for="lname">Apellido:</label><br>
+                <input type="text" id="lname" name="Apellido" required class="form-control anchoFormControl"><br>
+
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="Email" class="form-control anchoFormControl"><br>
+
+                <label for="fono">Telefono:</label><br>
+                <input type="text" id="fono" name="Telefono" required class="form-control anchoFormControl">  <br><br>
+
+                <textarea name="Mensaje" rows="4" cols="40" class="form-control">Escriba su mensaje</textarea>
+                <br>
+                <a type="button" href="javascript: history.go(-1)" class="btn btn-default">Volver atrás</a>
+                <button class="btn btn-primary btn-md " type="submit" value="Submit">Enviar Datos</button>
+                <br><br><br>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br>
+      <!-- FOOTER -->
+      <footer class="row">
+        <div class="col-xs-12 col-lg-6">
+          <div class="footer">
+            <p class="margenFooter">  © 2020 IGC INGENIERÍA Spa  Fono +56-41269409 Email proyecIGC@gmail.com   by Dionisio System SA </p>
+          </div>
+        </div>
+      </footer>
+
+</body>
+</html>
