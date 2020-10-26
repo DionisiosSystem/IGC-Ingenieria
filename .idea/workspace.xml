@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42003bb-5259-446c-9c98-9f2c38ce5051" name="Default Changelist" comment="" />
+    <list default="true" id="a42003bb-5259-446c-9c98-9f2c38ce5051" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/IGCIngenieria/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/IGCIngenieria/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/formulario/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/formulario/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +20,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jKIhtfCLAZadnBx0B6obOtD9rl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProyectosDjango/formulario" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -38,9 +46,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603547507826">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1829" y="119" key="FileChooserDialogImpl" timestamp="1603673376483">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1603547507826" />
+    <state x="1829" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603673376483" />
   </component>
 </project>

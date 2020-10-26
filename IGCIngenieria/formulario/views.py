@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import request
-from formulario.models import Usuario,Contacto
+from formulario.models import Usuario, Contacto
 from django.views.decorators.csrf import csrf_protect
 import formulario.forms
 
