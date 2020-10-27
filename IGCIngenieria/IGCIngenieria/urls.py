@@ -18,6 +18,9 @@ from django.urls import path, include
 from formulario import views
 from django.conf.urls.static import static
 from django.conf import settings
+from django.contrib.auth.views import logout_then_login, LoginView
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +28,6 @@ urlpatterns = [
     path('buscar/', views.buscar),
     path('formulario/',include('formulario.urls')),
     path('contacto/', include('formulario.urls')),
+    path('', LoginView.as_view(template_name='login.html'), name='login'),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
