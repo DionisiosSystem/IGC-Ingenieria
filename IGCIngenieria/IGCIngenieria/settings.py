@@ -135,4 +135,5 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER ='dionisiosystem@gmail.com'
 EMAIL_HOST_PASSWORD = 'cbr400rr'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-LOGIN_REDIRECT_URL = reverse_lazy('index')
+LOGIN_REDIRECT_URL = reverse_lazy('index')   # DONDE DIRECCIONAR
+LOGOUT_REDIRECT_URL = reverse_lazy('index')  # DEVUELTA AL INDEX
