@@ -54,3 +54,7 @@ def contacto(request):
     return render(request, "contacto.html", mensaje )
     #return render(request, 'index.html', context))
 
+
+def mensajes(request):
+    listadoMensajes = Contacto.objects.all()
+    return render(request, "listadoMensajes.html", {"listadoMensajes":listadoMensajes})

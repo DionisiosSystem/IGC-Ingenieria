@@ -5,4 +5,7 @@ from formulario import views
 urlpatterns = [
     path('index/', views.home, name="index"),
     path('contacto/', views.contacto, name="contacto"),
+    path('listadoMensajes/', views.mensajes, name="mensajes"),
+
+
 ]
