@@ -17,7 +17,7 @@ class Usuario(models.Model):
 
 
         def __str__(self): # metodo que se llama
-            return 'Nombre :%s , Apellido :%s , Email :%s , Edad :%s' % (self.Nombre, self.Apellido, self.Email, self.Edad)
+            return 'Nombre :%s , Apellido :%s , Email :%s ' % (self.Nombre, self.Apellido, self.Email)
 
 class Contacto(models.Model):
         Nombre = models.CharField(max_length=50,null=True)
@@ -32,6 +32,7 @@ class Contacto(models.Model):
             return 'Nombre :%s , Apellido :%s , Email :%s , Telefono :%s , Mensaje :%s , Fecha :%s'%(self.Nombre,self.Apellido,self.Email,self.Telefono,self.Mensaje,self.Fecha)
 
 
+#usuario AdminIGC
 
 #python manager.py makemigrations
 #python manage.py sqlmigrate formulario 0001
