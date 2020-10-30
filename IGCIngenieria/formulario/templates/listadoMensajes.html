@@ -5,10 +5,16 @@
     <title>Listado mensajes</title>
 </head>
 <body>
-    {% for mensaje in listadoMensajes %}
+<h2>Lista de mensajes</h2>
 
-    <p> nombre:{{mensaje.Nombre}} </p>
+<ul>
+    {% for mensaje in listadoMensajes %}
+        <li>Nombre :  {{mensaje.Nombre}}, Apellido : {{mensaje.Apellido}}, Email : {{mensaje.Email}}, Telefono : {{mensaje.Telefono}}, Mensaje : {{mensaje.Mensaje}}</li>
     {% endfor %}
+</ul>
+
+
+
 
 </body>
 </html>

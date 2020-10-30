@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Boards</title>
+  </head>
+  <body>
+    <h1>Listado de Mensajes</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Telefono</th>
+          <th>Mensaje</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for mensaje in listadoMensajes %}
+          <tr>
+            <td>
+              {{ mensaje.Nombre }}<br>
+
+            </td>
+            <td>{{mensaje.Apellido}}</td>
+            <td>{{mensaje.Email}}</td>
+            <td>{{mensaje.Telefono}}</td>
+            <td>{{mensaje.Mensaje}}</td>
+            <td>{{mensaje.Fecha}}</td>
+
+
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

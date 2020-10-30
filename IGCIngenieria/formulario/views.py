@@ -57,5 +57,5 @@ def contacto(request):
 
 def mensajes(request):
     listadoMensajes = formulario.models.Contacto.objects.all()
-    return render(request, "listadoMensajes.html", {"listadoMensajes": listadoMensajes})
+    return render(request, "listadoMensajes2.html", {"listadoMensajes": listadoMensajes})
 
