@@ -27,6 +27,7 @@ class Contacto(models.Model):
         Mensaje= models.CharField(max_length=300,null=True)
         #Fecha= models.DateField(),auto_now_add=True, blank=False)
         Fecha = models.DateTimeField(default=datetime.now(), blank=True)
+        Estado = models.BooleanField(default=True)
 
         def __str__(self):  # metodo que se llama
             return 'Nombre :%s , Apellido :%s , Email :%s , Telefono :%s , Mensaje :%s , Fecha :%s'%(self.Nombre,self.Apellido,self.Email,self.Telefono,self.Mensaje,self.Fecha)

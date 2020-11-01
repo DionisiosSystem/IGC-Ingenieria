@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a42003bb-5259-446c-9c98-9f2c38ce5051" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/IGCIngenieria/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/IGCIngenieria/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/formulario/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/formulario/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/formulario/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/formulario/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
