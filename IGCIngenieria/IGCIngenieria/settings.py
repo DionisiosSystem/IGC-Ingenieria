@@ -132,9 +132,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "formulario/static")
 
 EMAIL_USE_TLS = True
 EMAIL_HOST ='smtp.gmail.com'
-EMAIL_PORT = 25
+EMAIL_PORT = 25 #587
 EMAIL_HOST_USER ='dionisiosystem@gmail.com'
 EMAIL_HOST_PASSWORD = 'cbr400rr'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 LOGIN_REDIRECT_URL = reverse_lazy('index')   # DONDE DIRECCIONAR
 LOGOUT_REDIRECT_URL = reverse_lazy('index')  # DEVUELTA AL INDEX

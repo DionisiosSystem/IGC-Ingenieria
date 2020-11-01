@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a42003bb-5259-446c-9c98-9f2c38ce5051" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/IGCIngenieria/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/IGCIngenieria/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/IGCIngenieria/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/IGCIngenieria/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IGCIngenieria/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IGCIngenieria/formulario/templates/listadoMensajes2.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/formulario/templates/listadoMensajes2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/tests.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -51,6 +57,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1604188299130">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604188299130" />
+    <state x="129" y="55" key="DiffContextDialog" timestamp="1604188297574">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" key="DiffContextDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1604188297574" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603822385618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

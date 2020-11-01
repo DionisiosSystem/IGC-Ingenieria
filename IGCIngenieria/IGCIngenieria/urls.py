@@ -18,18 +18,35 @@ from django.urls import path, include
 from formulario import views
 from django.conf.urls.static import static
 from django.conf import settings
-from django.contrib.auth.views import logout_then_login, LoginView
+from django.contrib.auth.views import (logout_then_login, LoginView,PasswordResetView,PasswordResetDoneView,PasswordResetConfirmView ,PasswordResetCompleteView)
+
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('buscar_usuarios/', views.busqueda_usuario),
-    path('buscar/', views.buscar),
+    # path('buscar_usuarios/', views.busqueda_usuario),
+    #path('buscar/', views.buscar),
     path('formulario/',include('formulario.urls')),
     path('contacto/', include('formulario.urls')),
     path('', LoginView.as_view(template_name='login.html'), name='login'),
     path('accounts/login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', logout_then_login, name="logout"),
+
+    path('recuperaClave/templates/',
+        PasswordResetView.as_view(template_name='recuperaClave/templates/password_reset_form.html'),
+        name='password_reset'),
+    path('recuperaClave/templates/',
+        PasswordResetDoneView.as_view(template_name='recuperaClave/templates/password_reset_done.html'),
+        name='password_reset_done'),
+    path('recuperaClave/templates/<uidb64>/<token>/',
+        PasswordResetConfirmView.as_view(template_name='recuperaClave/templates/password_reset_confirm.html'),
+        name='password_reset_confirm'),
+    path('recuperaClave/templates/',
+        PasswordResetDoneView.as_view(template_name='recuperaClave/templates/password_reset_complete.html'),
+        name='password_reset_complete'),
+
+
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
