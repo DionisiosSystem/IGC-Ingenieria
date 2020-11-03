@@ -44,6 +44,7 @@ def contacto(request):
                # --- SI FORMULARIO DE ELEMENTO ES VALIDO, REGISTRA EL RESTO DE INFORMACION ---
                solicitud = contacto.save()
                mensaje = {'resultado': 'Sus datos han sido registrados con exito'}
+
             else:
                print("error")
                print(contacto.errors)

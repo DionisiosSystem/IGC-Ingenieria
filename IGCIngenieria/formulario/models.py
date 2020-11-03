@@ -33,6 +33,19 @@ class Contacto(models.Model):
             return 'Nombre :%s , Apellido :%s , Email :%s , Telefono :%s , Mensaje :%s , Fecha :%s'%(self.Nombre,self.Apellido,self.Email,self.Telefono,self.Mensaje,self.Fecha)
 
 
+
+
+class ListaPrecio(models.Model):
+        Nombre = models.CharField(max_length=50,null=True)
+        Valor = models.CharField(max_length=50,null=True)
+        Descripcion = models.CharField(max_length=50,null=True)
+        Estado = models.BooleanField(default=True)
+        Actualizacion = models.DateTimeField(default=datetime.now(), blank=True)
+
+
+        def __str__(self):  # metodo que se llama
+            return 'Nombre :%s , Valor :%s , Descripcion :%s , Estado :%s , Actualizacion :%s' % (self.Nombre, self.Valor, self.Descripcion, self.Estado, self.Actualizacion)
+
 #usuario AdminIGC
 
 #python manager.py makemigrations
