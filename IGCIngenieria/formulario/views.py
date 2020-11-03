@@ -60,3 +60,16 @@ def mensajes(request):
     listadoMensajes = formulario.models.Contacto.objects.all()
     return render(request, "listadoMensajes2.html", {"listadoMensajes": listadoMensajes})
 
+
+def clientes(request):
+    return render(request, "clientes.html")
+
+def obrasCiviles(request):
+    return render(request, "obrasCiviles.html")
+
+def obrasMenores(request):
+    return render(request, "obrasMenores.html")
+
+def QuienesSomos(request):
+    return render(request, "QuienesSomos.html")
+

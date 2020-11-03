@@ -33,6 +33,9 @@ urlpatterns = [
     path('accounts/login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', logout_then_login, name="logout"),
 
+
+
+
     path('recuperaClave/templates/',
         PasswordResetView.as_view(template_name='recuperaClave/templates/password_reset_form.html'),
         name='password_reset'),

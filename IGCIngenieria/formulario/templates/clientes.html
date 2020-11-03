@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Titulo Página -->
+        <title>IGC Ingeniería</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- **Importaciones** --> 
+
+        <!-- Jquery -->
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Estilos -->
+        <!--<link rel="stylesheet" href="css/estilos.css"> -->
+        <link rel="stylesheet" href="/static/css/estilos.css">
+
+        <!-- Bootstrap 4-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--FontAwesome-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+         <!-- Toastr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+         <!--Funciones Jquery-->
+         <script type="text/javascript">
+           
+          $(document).ready(function(){
+            $("#imgMcdonalds").click(function(){
+              $("#modalMcdonalds").modal("show");
+            });
+          });
+
+         </script>
+    </head>
+    <body>
+
+      <!-- ** CABECERA ** -->
+      <div class="contenedor_principal" >
+        <header class="row">  
+            <div class="col-xs-12 col-lg-12">
+                <div class="header">
+                    <h1 class="letraBlanca"> IGC Ingeniería Spa </h1>
+                </div>
+            </div>
+        </header>
+      </div>
+
+      <!-- ***MENU(NAV)***  -->
+      <nav class="navbar navbar-expand-sm  colorNav" >  
+          <!-- Hamburguesa Menu Responsivo -->           
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
+                  aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars"></i></span></button>
+          <!-- Links Menu -->
+          <div class="collapse navbar-collapse" id="menu">      
+              <ul class="navbar-nav " >
+                <li class="nav-item">
+                  <a class="nav-link letrasNegras" href="index.html" >Inicio</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link letrasNegras" href="QuienesSomos.html">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle letrasNegras" href="#" id="navbardrop" data-toggle="dropdown">
+                    Servicios
+                  </a>
+                  <!-- Submenu -->
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item letrasNegras" href="obrasCiviles.html">Obras Civiles</a>
+                    <a class="dropdown-item letrasNegras" href="obrasMenores.html">Servicios Obras Menores</a>
+                  </div>
+                </li>          
+                  <li class="nav-item">
+                  <a class="nav-link letrasNegras" href="#">Clientes</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link letrasNegras" href="contacto.html">Contactos</a>
+                </li>
+              </ul>
+          </div>
+      </nav>
+        
+      <!-- ***CUERPO***  -->
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12 col-lg-12">
+                  <div class=" text-center">
+                      <h4><b> QUIENES CONFIARON EN NOSOTROS </b></h4>
+                      <hr >
+                  </div>
+              </div>
+          </div>
+          <!-- Logo CLientes-->
+          <div class="row text-center">
+            <div class="col-xs-6 col-lg-3">
+              <img class="tamañoClientes imagen" src="https://www.logaster.com.es/blog/wp-content/uploads/2018/04/historia-del-logotipo-de-NASA.png">
+            </div>
+             <div class="col-xs-6 col-lg-3 imagen">
+              <img class="tamañoClientes" id="imgMcdonalds" src="https://starteq.net/wp-content/uploads/2019/11/mcdonalds-png-logo-picture-3-1024x1001.png">
+            </div>
+             <div class="col-xs-6 col-lg-3 imagen">
+              <img class="tamañoClientes" src="https://www.logaster.com.es/blog/wp-content/uploads/2018/04/historia-del-logotipo-de-LEGO.png">
+            </div>
+             <div class="col-xs-6 col-lg-3 imagen">
+              <img class="tamañoClientes" src="https://reportajes.lavanguardia.com/wp-content/uploads/sites/1/2018/03/2000px-Amazon_logo_plain.svg_.png">
+            </div>
+          </div><br>
+           <div class="row text-center">
+            <div class="col-xs-6 col-lg-3 imagen">
+              <img class="tamañoClientes" src="https://i.pinimg.com/originals/44/03/3a/44033ac93b0ce65dcab3285a28d5cf96.jpg">
+            </div>
+             <div class="col-xs-6 col-lg-3 imagen">
+              <img class="tamañoClientes" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg">
+            </div>
+             <div class="col-xs-6 col-lg-3 imagen">
+              <img class="tamañoClientes" src="https://press.ktm.com/Content/207078/1373071f-f3f7-4268-95be-d6f9ae76be47/600/1200/.jpg">
+            </div>
+             <div class="col-xs-6 col-lg-3 imagen">
+              <img class="tamañoClientes" src="https://www.starbuckspr.com/wp-content/uploads/2020/01/starbucks-logo.png">
+            </div>
+          </div><br>
+      </div><br><br><br><br>
+
+      <!-- ** FOOTER ** -->
+      <footer class="row">
+        <div class="col-xs-12 col-lg-6">
+            <div class="footer">
+                 <p class="margenFooter">  © 2020 IGC INGENIERÍA Spa  Fono +56-41269409 Email proyecIGC@gmail.com   by Dionisio System SA </p>
+            </div>
+        </div>
+      </footer>
+  
+      <!-- MODAL INFORMACIÓN CLIENTES -->
+      <div class="modal fade" id="modalMcdonalds" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">McDONALD'S Chile</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              La historia de McDonald's en Chile se inicia con la apertura del primer local en avenida Kennedy en 1990, hace más de 25 años, en una época de crecimiento y apertura en el país. Desde entonces el éxito ha sido ininterrumpido gracias a la innovación y la calidad de los productos y servicios que la empresa ofrece.<br>
+
+              Con la apertura del restaurante de Avenida Kennedy, McDonald's se convirtió en la primera cadena de restaurantes de servicio rápido en instalarse en Chile y la exitosa acogida de los clientes propicio en los años posteriores la expansión y desarrollo de la empresa a lo largo del país.<br>
+
+              Así, siguieron la inauguración del restaurante en La Florida cerca del actual metro Mirador y luego el local del centro en pleno paseo Ahumada y un cuarto local en el Mall Alto Las Condes. La expansión por Santiago continuó con la inauguración de los locales de McDonald's de El Bosque y El Faro en pleno Apoquindo con Manquehue. Todos ellos con una importante afluencia de público.<br>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+             
+        
+    </body>
+</html>

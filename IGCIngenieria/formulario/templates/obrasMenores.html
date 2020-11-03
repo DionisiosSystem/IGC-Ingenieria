@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Titulo Página -->
+        <title>IGC Ingeniería</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- **Importaciones** --> 
+
+        <!-- Jquery -->
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="/static/css/estilos.css">
+
+        <!-- Bootstrap 4-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--FontAwesome-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+         <!-- Toastr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+       <!--Funciones Jquery-->
+        <script type="text/javascript"> 
+          $(document).ready(function() {
+
+            $("#cotiza").mouseover(function(){
+              $(this).text("CONTACTANOS");
+            });           
+
+            $("#cotiza").mouseout(function(){
+              $(this).text("Cotiza tu proyecto con nosotros y aprovecha opciones de pago");
+            });
+
+          });
+         </script>
+    </head>
+    <body>
+    <!-- ** CABECERA ** -->
+      <div class="contenedor_principal" >
+          <header class="row">  
+              <div class="col-xs-12 col-lg-12">
+                  <div class="header">
+                      <h1 class="letraBlanca"> IGC Ingeniería Spa </h1>
+                  </div>
+              </div>
+          </header>
+      </div>
+
+      <!-- ***MENU(NAV)***  -->
+        <nav class="navbar navbar-expand-sm  colorNav" >  
+            <!-- Hamburguesa Menu Responsivo -->           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars"></i></span></button>
+            <!-- Links Menu -->
+            <div class="collapse navbar-collapse" id="menu">      
+                <ul class="navbar-nav " >
+                  <li class="nav-item">
+                    <a class="nav-link letrasNegras" href="index.html" >Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link letrasNegras" href="QuienesSomos.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle letrasNegras" href="#" id="navbardrop" data-toggle="dropdown">
+                      Servicios
+                    </a>
+                    <!-- Submenu -->
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item letrasNegras" href="obrasCiviles.html">Obras Civiles</a>
+                      <a class="dropdown-item letrasNegras" href="#">Servicios Obras Menores</a>
+                    </div>
+                  </li>          
+                    <li class="nav-item">
+                    <a class="nav-link letrasNegras" href="clientes.html">Clientes</a>
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link letrasNegras" href="contacto.html">Contactos</a>
+                  </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ***CUERPO***  -->
+        <div class="container">
+          <div class="row">
+              <div class="col-xs-12 col-lg-12">
+                        <div class=" text-center">
+                    <h4><b> OBRAS MENORES</b></h4>
+                </div>
+            </div>
+            </div>
+            <!-- Informacion-->
+            <div class="row">
+              <div class="col-xs-12 col-lg-12 "  >
+                  <div class="margenesSeccion">
+                      <p> IGC, busca en forma permanente la integración de todos los recursos dentro de la industria de la construcción, y así
+                           entregar a nuestros clientes, los elementos y servicios con la mejor calidad tanto en materiales y mano de obra responsable, y que
+                           este sea entregado en el mejor tiempo propuesto, instancia que es reconocida por nuestros clientes, que son  nuestro mejor sello de calidad..
+                      </p>
+                  </div>
+              </div>
+            </div><br><br>
+            <!-- Imagenes -->
+            <div class="row centrado">
+                <div class="col-xs-12 col-lg-4">
+                  <img src="http://www.construccionesrv.cl/images/1294851516_156465474_5-ingenieria-y-construccion-valparaiso.jpg" class="margenesSeccion imgCard" >
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                  <img src="http://www.construccionesrv.cl/images/obras-330x220.png" class="margenesSeccion imgCard" >
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                  <img src="http://www.construccionesrv.cl/images/obras-menores-en-construccion-construccion.jpg" class="margenesSeccion imgCard" >
+                </div>
+             </div>     
+            <!-- boton contacto -->
+            <a href="contacto.html" type="button" class="btn btn-primary btn-block" role="button" id="cotiza">Cotiza tu proyecto con nosotros y aprovecha opciones de pago</a>   
+        </div><br><br><br><br>
+
+        <!--*** FOOTER **-->
+        <footer class="row">
+          <div class="col-xs-12 col-lg-6">
+            <div class="footer">
+                   <p class="margenFooter">  © 2020 IGC INGENIERÍA Spa  Fono +56-41269409 Email proyecIGC@gmail.com   by Dionisio System SA </p>
+              </div>
+          </div>
+        </footer>
+  </body>
+</html>
