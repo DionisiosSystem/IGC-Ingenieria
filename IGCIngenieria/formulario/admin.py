@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Usuario,Contacto
+from .models import Usuario,Contacto,ListaPrecio
 
 
 # Register your models here.
@@ -15,6 +15,9 @@ class ContactoAdmin(admin.ModelAdmin):
 class UsuarioAdmin(admin.ModelAdmin):
        list_display = ('Nombre','Apellido','Email')
 
+class ListaPrecioAdmin(admin.ModelAdmin):
+       list_display = ('Nombre','Valor','Descripcion','Estado')
 
 admin.site.register(Usuario,UsuarioAdmin)
 admin.site.register(Contacto,ContactoAdmin)
+admin.site.register(ListaPrecio,ListaPrecioAdmin)
