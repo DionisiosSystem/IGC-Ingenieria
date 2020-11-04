@@ -36,17 +36,17 @@ urlpatterns = [
 
 
 
-    path('recuperaClave/templates/',
-        PasswordResetView.as_view(template_name='recuperaClave/templates/password_reset_form.html'),
+    path('recuperaClave/',
+        PasswordResetView.as_view(template_name='password_reset_form.html'),
         name='password_reset'),
-    path('recuperaClave/templates/',
-        PasswordResetDoneView.as_view(template_name='recuperaClave/templates/password_reset_done.html'),
+    path('recuperaClave/done',
+        PasswordResetDoneView.as_view(template_name='password_reset_done.html'),
         name='password_reset_done'),
-    path('recuperaClave/templates/<uidb64>/<token>/',
-        PasswordResetConfirmView.as_view(template_name='recuperaClave/templates/password_reset_confirm.html'),
+    path('recuperaClave/confirm/<uidb64>/<token>/',
+        PasswordResetConfirmView.as_view(template_name='password_reset_confirm.html'),
         name='password_reset_confirm'),
-    path('recuperaClave/templates/',
-        PasswordResetDoneView.as_view(template_name='recuperaClave/templates/password_reset_complete.html'),
+    path('recuperaClave/complete',
+        PasswordResetDoneView.as_view(template_name='password_reset_complete.html'),
         name='password_reset_complete'),
 
 

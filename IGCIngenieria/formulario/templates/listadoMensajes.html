@@ -5,8 +5,12 @@
     <title>Listado mensajes</title>
 </head>
 <body>
-<h2>Lista de mensajes</h2>
 
+<h2>Lista de mensajes</h2>
+<form method="post">
+     {% csrf_token %}
+      <input type="text" id="nombre" name="nombre"> <br>
+       <input type="submit" value="Filtrar"/>
 <ul>
     {% for mensaje in listadoMensajes %}
         <li>Nombre :  {{mensaje.Nombre}}, Apellido : {{mensaje.Apellido}}, Email : {{mensaje.Email}}, Telefono : {{mensaje.Telefono}}, Mensaje : {{mensaje.Mensaje}}</li>
@@ -14,7 +18,7 @@
 </ul>
 
 
-
+</form>
 
 </body>
 </html>

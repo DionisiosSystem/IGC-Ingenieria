@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'formulario',
+    'recuperaClave',
     'bootstrap4',
 
 ]
@@ -133,6 +134,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "formulario/static")
 
 EMAIL_USE_TLS = True
 EMAIL_HOST ='smtp.gmail.com'
+SERVER_EMAIL = 'dionisiosystem@gmail.com'
+DEFAULT_FROM_EMAIL = 'dionisiosystem@gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER ='dionisiosystem@gmail.com'
 EMAIL_HOST_PASSWORD = 'cbr400rr'

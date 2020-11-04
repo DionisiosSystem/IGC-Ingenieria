@@ -55,10 +55,19 @@ def contacto(request):
     return render(request, "contacto.html", mensaje )
     #return render(request, 'index.html', context))
 
-
+@csrf_protect
 def mensajes(request):
-    listadoMensajes = formulario.models.Contacto.objects.all()
-    return render(request, "listadoMensajes2.html", {"listadoMensajes": listadoMensajes})
+    listadoMensajes = None
+    filtroNombre =''
+
+    if (request.method == "POST"):
+        filtroNombre=request.POST['nombre']
+        listadoMensajes=formulario.models.Contacto.objects.filter(Nombre__icontains=request.POST['nombre'] )
+
+    else:
+        listadoMensajes = formulario.models.Contacto.objects.all()
+
+    return render(request, "listadoMensajes2.html", {"listadoMensajes": listadoMensajes,"filtroNombre":filtroNombre})
 
 
 def clientes(request):
@@ -72,4 +81,6 @@ def obrasMenores(request):
 
 def QuienesSomos(request):
     return render(request, "QuienesSomos.html")
+
+
 
