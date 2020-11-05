@@ -4,6 +4,14 @@
     <list default="true" id="a42003bb-5259-446c-9c98-9f2c38ce5051" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IGCIngenieria/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/formulario/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/formulario/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/formulario/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/formulario/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGCIngenieria/recuperaClave/templates/password_reset_form2.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,16 +75,5 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1603852158438" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/IGCIngenieria/formulario/views.py</url>
-          <line>34</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -78,9 +78,15 @@
                     <a class="nav-link letrasNegras" href="contacto.html">Contactos</a>
                   </li>
 
-                    <li class="nav-item">
-                    <a class="nav-link letrasNegras" href="{% url 'listadoMensajes' %}">>mensaje</a>
-                  </li>
+                    {% for groups in request.user.groups.values_list %}
+                        {% for group in groups %}
+                           {% if group == 'AdminCompañia'%}
+                                <li class="nav-item">
+                                <a class="nav-link letrasNegras" href="{% url 'listadoMensajes' %}">>mensaje</a>
+                                </li>
+                           {%endif%}
+                        {% endfor %}
+                    {% endfor %}
 
                     <li class="nav-item">
                     <a class="nav-link letrasNegras" href="{% url 'login' %}">Logins</a>

@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path
 from formulario import views
+from django.contrib.auth.views import (logout_then_login, LoginView,PasswordResetView,PasswordResetDoneView,PasswordResetConfirmView ,PasswordResetCompleteView)
+
 
 urlpatterns = [
     path('index/', views.home, name="index"),
