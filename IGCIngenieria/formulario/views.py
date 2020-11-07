@@ -82,7 +82,7 @@ def obrasMenores(request):
 def QuienesSomos(request):
     return render(request, "QuienesSomos.html")
 
-
+# MANTENEDOR PRODUCTOS
 
 @csrf_protect
 def productos(request):
