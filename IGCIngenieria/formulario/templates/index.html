@@ -84,15 +84,27 @@
                     {% for groups in request.user.groups.values_list %}
                         {% for group in groups %}
                            {% if group == 'AdminCompañia'%}
-                                <li class="nav-item">
-                                <a class="nav-link letrasNegras" href="{% url 'listadoMensajes' %}">>mensaje</a>
-                                </li>
+
+
+                           <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle letrasNegras" href="#" id="navbardrop" data-toggle="dropdown">
+                              Mantención
+                            </a>
+                            <!-- Submenu -->
+                            <div class="dropdown-menu">
+        
+                              <a class="nav-link letrasNegras" href="{% url 'listadoMensajes' %}">Mensajes</a>
+                              <a class="nav-link letrasNegras" href="{% url 'listadoProductos' %}">Mantenedor Productos</a>
+        
+                            </div>
+                          </li> 
+
                            {%endif%}
                         {% endfor %}
                     {% endfor %}
 
                     <li class="nav-item">
-                    <a class="nav-link letrasNegras" href="{% url 'login' %}">Logins</a>
+                    <a class="nav-link letrasNegras" href="{% url 'login' %}">Iniciar Sesión</a>
                   </li>
                   </li>
                     <li class="nav-item">

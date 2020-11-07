@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login Usuarios</title>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Titulo Página -->
+        <title>IGC Ingeniería</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- **Importaciones** --> 
+
+        <!-- Jquery -->
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Estilos -->
+       <!--<link href="/static/css/estilos.css"> -->
+        <link rel="stylesheet" href="/static/css/estilos.css">
+
+
+        <!-- Bootstrap 4-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--FontAwesome-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+         <!-- Toastr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+          
+    
+    
+    <title>Login</title>
 </head>
 <body>
+<div class="container">
+  <h1>Iniciar Sesión</h1>
 
     <form action="" method="POST">{% csrf_token %}
-        <p>Nombre usuario :<input type="text" name="username"></p>
-        <p>Passwword      :<input type="password" name="password"></p>
-        <p><input type="submit" value="ingresar"></p>
-        <p><input type="submit" value="Cliente"></p>
-        <p><input type="submit" value="prueba"></p>
+        <label>Nombre Usuario </label>
+        <input type="text" name="username" class="form-control"> 
+
+        <label>Password</label>
+        <input type="password" name="password" class="form-control"> 
+
+       
+       <input type="submit" value="ingresar" class="btn btn-primary">
+
+
+
+
+      
+
+
     </form>
 
     <a href="/recuperaClave/">olvide contraseña</a>
+    <br>
+    <a class="nav-link letrasNegras" href="{% url 'index' %}">Visitas</a>
 </body>
 </html>
