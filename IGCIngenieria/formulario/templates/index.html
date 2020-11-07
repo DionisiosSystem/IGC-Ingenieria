@@ -59,7 +59,8 @@
                     <a class="nav-link letrasNegras" href="#" >Inicio</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link letrasNegras" href="QuienesSomos.html">Nosotros</a>
+
+                      <a class="nav-link letrasNegras" href="{% url 'QuienesSomos' %}">Nosotros</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle letrasNegras" href="#" id="navbardrop" data-toggle="dropdown">
@@ -67,15 +68,17 @@
                     </a>
                     <!-- Submenu -->
                     <div class="dropdown-menu">
-                      <a class="dropdown-item letrasNegras" href="obrasCiviles.html">Obras Civiles</a>
-                      <a class="dropdown-item letrasNegras" href="obrasMenores.html">Servicios Obras menores</a>
+
+                     <a class="dropdown-item letrasNegras" href="{% url 'obrasCiviles' %}">Obras Civiles</a>
+                     <a class="dropdown-item letrasNegras" href="{% url 'obrasMenores' %}">Servicios Obras Menores</a>
+
                     </div>
                   </li>          
-                    <li class="nav-item">
-                    <a class="nav-link letrasNegras" href="clientes.html">Clientes</a>
+                  <li class="nav-item">
+                    <a class="nav-link letrasNegras" href="{% url 'clientes' %}">Clientes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link letrasNegras" href="contacto.html">Contactos</a>
+                    <a class="nav-link letrasNegras" href="{% url 'contacto' %}">Contactos</a>
                   </li>
 
                     {% for groups in request.user.groups.values_list %}
