@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Titulo Página -->
+        <title>IGC Ingeniería</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- **Importaciones** --> 
+
+        <!-- Jquery -->
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Estilos -->
+       <!--<link href="/static/css/estilos.css"> -->
+        <link rel="stylesheet" href="/static/css/estilos.css">
+
+
+        <!-- Bootstrap 4-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--FontAwesome-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+         <!-- Toastr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+          
+    
+    
+    <title>Listar Productos</title>
+</head>
+<body>
+<div class="container">
+  <h1>Listar Productos</h1>
+  
+    <form method="post">
+     {% csrf_token %}
+      <input type="text" class="form-control" style="width: 30%;" id="nombre" name="nombre" value="{{filtroNombre}}"><button type="submit" class="btn btn-primary">Filtrar</button>
+    </form>
+   <br>
+    <div class="row">
+      <div class="col-6-lg">     
+        <a type="button" href="{% url 'insertarProducto' %}" class="btn btn-warning ">+ Agregar Producto</a>
+      </div>
+      <div class="col-6-lg">     
+        <a type="button" href="{% url 'index' %}" class="btn btn-BASIC">REGRESAR A LA PÁGINA PRINCIPAL</a>
+      </div>
+    </div>
+    <br><br>
+    <table border="1" class="table table-stripper">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Valor</th>
+          <th>Descripcion</th>
+          <th>Estado</th>   
+          <th>Actualizacion</th> 
+          <th>Acción</th>    
+        </tr>
+      </thead>
+      <tbody>
+        {% for productos in listadoProductos %}
+          <tr>
+            <td>
+              {{productos.Nombre}}<br>
+
+            </td>
+            <td>{{productos.Valor}}</td>
+            <td>{{productos.Descripcion}}</td>
+            <td>{{productos.Estado}}</td>
+            <td>{{productos.Actualizacion}}</td>
+            <td>
+              
+              <button class="btn btn-danger" data-toggle="modal" data-target="#myModal">Borra</button>
+            
+            </td>
+          </tr>
+
+          <div class="modal" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-body">
+                  <p>Desea eliminar el registro :  <b>{{productos.Nombre}}</b> ? </p>
+                </div>
+                <div class="modal-footer">
+                  <form action="{% url 'delete' productos.id %}" method="post">
+                    {% csrf_token %}
+                    <button class="btn btn-danger">Eliminar</button>
+                   </form>
+                  <!-- <button type="button" class="btn btn-primary">Eliminar</button> -->
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    
+
+  </body>
+</html>
