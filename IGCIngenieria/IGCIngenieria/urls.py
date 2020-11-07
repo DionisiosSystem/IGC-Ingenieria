@@ -25,7 +25,7 @@ from django.contrib.auth.views import (logout_then_login, LoginView,PasswordRese
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('buscar_usuarios/', views.busqueda_usuario),
+    #path('buscar_usuarios/', views.busqueda_usuario),
     #path('buscar/', views.buscar),
     path('formulario/',include('formulario.urls')),
     path('contacto/', include('formulario.urls')),

@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'formulario',
     'recuperaClave',
-    'bootstrap4',
+    # 'bootstrap4',
 
 ]
 
