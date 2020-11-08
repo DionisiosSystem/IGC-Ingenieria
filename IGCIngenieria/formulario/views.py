@@ -84,3 +84,46 @@ def QuienesSomos(request):
 
 
 
+@csrf_protect
+def productos(request):
+    listadoProductos = None
+    filtroNombre =''
+
+    if (request.method == "POST"):
+        filtroNombre=request.POST['nombre']
+        listadoProductos=formulario.models.ListaPrecio.objects.filter(Nombre__icontains=request.POST['nombre'] )
+
+    else:
+        listadoProductos = formulario.models.ListaPrecio.objects.all()
+
+    return render(request, "listadoProductos2.html", {"listadoProductos": listadoProductos,"filtroNombre":filtroNombre})
+
+@csrf_protect
+def insertarProducto(request):
+    mensaje = {'resultado': ''}
+    if (request.method=="POST"):
+        data = request.POST.copy()
+        try:
+            productos = formulario.forms.ListaPrecioForm(data, prefix='')
+            if productos.is_valid():
+               print("es valido")
+               # --- SI FORMULARIO DE ELEMENTO ES VALIDO, REGISTRA EL RESTO DE INFORMACION ---
+               solicitud = productos.save()
+               mensaje = {'resultado': 'Sus datos han sido registrados con exito'}
+
+            else:
+               print("error")
+               print(productos.errors)
+        except Exception as e:
+            return HttpResponse("Error al ingresar el registro: " + str(e))
+
+
+    return render(request, "insertarProducto.html", mensaje )
+
+def delete(request, producto_id):        
+    productos=formulario.models.ListaPrecio.objects.get(id=producto_id)
+    productos.delete()
+    mensaje = {'resultado': 'Registro Eliminado'}
+    return render(request, "insertarProducto.html", mensaje)
+
+

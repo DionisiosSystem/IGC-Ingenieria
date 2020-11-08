@@ -12,4 +12,8 @@ urlpatterns = [
     path('obrasCiviles/', views.obrasCiviles, name="obrasCiviles"),
     path('obrasMenores/', views.obrasMenores, name="obrasMenores"),
     path('QuienesSomos/', views.QuienesSomos, name="QuienesSomos"),
+
+     path('listadoProductos/', views.productos, name="listadoProductos"),
+    path('insertarProducto/', views.insertarProducto, name="insertarProducto"),
+    path('delete/<int:producto_id>', views.delete, name="delete"),
 ]
