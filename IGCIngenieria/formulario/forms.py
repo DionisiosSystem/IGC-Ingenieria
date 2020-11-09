@@ -7,4 +7,10 @@ class ContactoForm(forms.ModelForm):
         model = formulario.models.Contacto
         fields = '__all__'
 
+class ListaPrecioForm(forms.ModelForm):
+
+    class Meta:
+        model = formulario.models.ListaPrecio
+        fields = '__all__'
+
 

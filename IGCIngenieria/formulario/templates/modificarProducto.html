@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Titulo Página -->
+        <title>IGC Ingeniería</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- **Importaciones** --> 
+
+        <!-- Jquery -->
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="/static/css/estilos.css">
+
+        <!-- Bootstrap 4-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--FontAwesome-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+         <!-- Toastr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    </head>
+    <body>
+
+   
+        <div class="container" style="width: 30%;">
+            
+            <h1>Editar Productos</h1>
+            
+             <form  action="" method="post" class="text-left" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="pNombre" >Nombre:</label><br>
+                <input type="text" id="pNombre" name="Nombre" class="form-control anchoFormControl" value="{{productos.Nombre}}"><br>
+
+                <label for="pValor">Valor:</label><br>
+                <input type="number" id="pValor" name="Valor" class="form-control anchoFormControl" value="{{productos.Valor}}"><br>
+
+                <label for="pDescripcion">Descripción:</label><br>
+                <input type="text" id="pDescripcion" name="Descripcion" class="form-control anchoFormControl" value="{{productos.Descripcion}}"><br>
+              
+                <label for="pEstado">Estado:</label><br>
+                <select class="form-control" id="pEstado" name="Estado">
+                {% if productos.Estado == 1 %}
+                    <option value="true" selected>Activo</option>
+                    <option value="false">Desactivo</option>
+                {% else %}
+                    <option value="true">Activo</option>
+                    <option value="false" selected>Desactivo</option>
+                {% endif %}
+                </select>
+                <!-- <input type="text" name="Actualizacion"> -->
+                 <br><br>
+
+                <!-- <label for="pActualizacion">Actualización:</label><br>
+                <input type="text" id="pActualizacion" name="pActualizacion" class="form-control anchoFormControl">
+                <br> -->
+                <!-- <a type="button" href="javascript: history.go(-1)" class="btn btn-default">Volver atrás</a> -->
+                <button class="btn btn-primary btn-md " type="submit" value="Submit">Editar</button>
+                 <a type="button" href="{% url 'listadoProductos' %}" class="btn btn-warning">Listar Datos</a>
+                 <a type="button" href="{% url 'index' %}" class="btn btn-basic">REGESAR A LA PÁGINA PRINCIPAL</a>
+                <br><br><br>
+            </form>
+          </div>
+       
+      <br><br><br><br>
+    
+      
+
+</body>
+</html>

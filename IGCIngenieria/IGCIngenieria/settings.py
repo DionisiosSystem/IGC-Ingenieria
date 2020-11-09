@@ -130,6 +130,8 @@ STATIC_URL = '/media/'
 
 MEDIA_URL = "/static/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "formulario/static")
+
+
 #APPEND_SLASH=False
 
 EMAIL_USE_TLS = True
