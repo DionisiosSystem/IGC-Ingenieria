@@ -1,12 +1,15 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.http import request
 from formulario.models import Usuario, Contacto
 from django.views.decorators.csrf import csrf_protect
 import formulario.forms
+import requests
+import urllib.request, json
+
 
 # Create your views here.
 def busqueda_usuario(request):
@@ -29,7 +32,20 @@ def buscar(request):
 
 
 def home(request):
-    return render(request, "index.html")
+    response = requests.get('https://api.gael.cl/general/public/monedas/USD')
+
+    geodata = response.json()
+
+
+    context = locals()
+
+    return render(request, 'index.html', {
+          'Nombre': geodata['Nombre'],
+          'Valor': geodata['Valor'],
+          'Fecha': geodata['Fecha']
+     })
+
+
 
 # vista para guardar los datos de contacto en la base de datos
 @csrf_protect
@@ -83,7 +99,8 @@ def QuienesSomos(request):
     return render(request, "QuienesSomos.html")
 
 
-
+# Codigo Mantenedor de producto
+# Listar Productos
 @csrf_protect
 def productos(request):
     listadoProductos = None
@@ -97,7 +114,7 @@ def productos(request):
         listadoProductos = formulario.models.ListaPrecio.objects.all()
 
     return render(request, "listadoProductos2.html", {"listadoProductos": listadoProductos,"filtroNombre":filtroNombre})
-
+# Insertar Productos
 @csrf_protect
 def insertarProducto(request):
     mensaje = {'resultado': ''}
@@ -120,10 +137,42 @@ def insertarProducto(request):
 
     return render(request, "insertarProducto.html", mensaje )
 
+# Borrar Productos
 def delete(request, producto_id):        
     productos=formulario.models.ListaPrecio.objects.get(id=producto_id)
     productos.delete()
     mensaje = {'resultado': 'Registro Eliminado'}
     return render(request, "insertarProducto.html", mensaje)
 
+# Modificar Productos
+def modificar(request, producto_id):     
+    # obtenemos los datos con el id del producto
+    productos = get_object_or_404(formulario.models.ListaPrecio, id=producto_id) 
+    # Preguntamos si viene por post 
+    if request.method == 'POST':
+        formu = formulario.forms.ListaPrecioForm(data=request.POST, instance=productos, files=request.FILES)
+        if formu.is_valid():
+            formu.save()
+            return redirect(to="listadoProductos")
+           
+       
+    return render(request, 'modificarProducto.html', {'productos': productos})
+
+
+
+
+
+# def dolar(request):
+#     response = requests.get('https://api.gael.cl/general/public/monedas/USD')
+#     geodata = response.json()
+#     context = locals()
+#     # template = 'templates/home.html'
+#     return render(request, '/templates/index.html', {
+#         'Nombre': geodata['Nombre'],
+#         'Valor': geodata['Valor'],
+#         'Fecha': geodata['Fecha']
+#     })
+#
+
+    
 

@@ -72,10 +72,10 @@
             <td>{{productos.Descripcion}}</td>
             <td>{{productos.Estado}}</td>
             <td>{{productos.Actualizacion}}</td>
-            <td>
-              
-              <button class="btn btn-danger" data-toggle="modal" data-target="#myModal">Borra</button>
-            
+            <td>              
+              <button class="btn btn-danger" data-toggle="modal" data-target="#myModal">Borra</button>            
+                        
+              <a type="button" href="{% url 'modificar' productos.id %}" class="btn btn-warning">Modificar</a>            
             </td>
           </tr>
 

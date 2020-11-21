@@ -29,13 +29,13 @@ urlpatterns = [
     #path('buscar/', views.buscar),
     path('formulario/',include('formulario.urls')),
     path('contacto/', include('formulario.urls')),
-    path('', LoginView.as_view(template_name='login.html'), name='login'),
+    path('login', LoginView.as_view(template_name='login.html'), name='login'),
     path('accounts/login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', logout_then_login, name="logout"),
-
-
-
-
+    path('', LoginView.as_view(template_name='index.html'), name='index'),
+    # path('',include('templates/index.html')),
+    path('oauth/', include('social_django.urls', namespace='social')),
+    
     path('recuperaClave/',
         PasswordResetView.as_view(template_name='password_reset_form.html'),
         name='password_reset'),

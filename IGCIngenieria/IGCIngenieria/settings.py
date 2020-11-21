@@ -30,6 +30,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Integración Facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '769054763688112'
+SOCIAL_AUTH_FACEBOOK_SECRET = '4f704fc33a5fce430c59b92e8c5e46a8'
+
 
 # Application definition
 
@@ -44,8 +48,10 @@ INSTALLED_APPS = [
     'recuperaClave',
     # 'bootstrap4',
 
-]
+    'social_django',
 
+]
+# Código que se ejecuta en cada peticion (MIDDLEWARE)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -54,6 +60,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Facebook
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'IGCIngenieria.urls'
@@ -64,11 +72,18 @@ TEMPLATES = [
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
+            # Datos que van a estar disponibles de manera global
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # facebook
+                # Autentcación
+                'social_django.context_processors.backends',
+                # Redirección
+                'social_django.context_processors.login_redirect',
+
             ],
         },
     },
@@ -130,6 +145,16 @@ STATIC_URL = '/media/'
 
 MEDIA_URL = "/static/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "formulario/static")
+
+# AUTENTICACIÓN FACEBOOK
+# El paquete permite integrarse con otras redes sociales de igual manera
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+
+
 #APPEND_SLASH=False
 
 EMAIL_USE_TLS = True
