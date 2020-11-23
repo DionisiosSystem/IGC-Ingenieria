@@ -31,11 +31,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Integración Facebook
-SOCIAL_AUTH_FACEBOOK_KEY = '769054763688112'
-SOCIAL_AUTH_FACEBOOK_SECRET = '4f704fc33a5fce430c59b92e8c5e46a8'
+SOCIAL_AUTH_FACEBOOK_KEY = '211059777085811'
+SOCIAL_AUTH_FACEBOOK_SECRET = '5a9d540e20981992af3515b6d645867a'
 
 
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -49,10 +48,9 @@ INSTALLED_APPS = [
     # 'bootstrap4',
 
     'social_django',
-    
-    'Api1',
     'rest_framework',
     'corsheaders',
+    'Api1',
 ]
 # Código que se ejecuta en cada peticion (MIDDLEWARE)
 MIDDLEWARE = [
@@ -155,6 +153,9 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
+
+
+
 
 
 

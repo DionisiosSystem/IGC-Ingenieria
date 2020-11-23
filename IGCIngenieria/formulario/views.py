@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.http import request
@@ -11,7 +11,7 @@ import requests
 import urllib.request, json
 
 
-# Create your views here.
+# Buscar Usuario
 def busqueda_usuario(request):
 
     return render(request, "BuscarUsuarios.html")
@@ -30,7 +30,7 @@ def buscar(request):
         mensaje = "ingrese datos"
    return HttpResponse(mensaje)
 
-
+# Consumo API Externa
 def home(request):
     response = requests.get('https://api.gael.cl/general/public/monedas/USD')
 
@@ -161,18 +161,6 @@ def modificar(request, producto_id):
 
 
 
-
-# def dolar(request):
-#     response = requests.get('https://api.gael.cl/general/public/monedas/USD')
-#     geodata = response.json()
-#     context = locals()
-#     # template = 'templates/home.html'
-#     return render(request, '/templates/index.html', {
-#         'Nombre': geodata['Nombre'],
-#         'Valor': geodata['Valor'],
-#         'Fecha': geodata['Fecha']
-#     })
-#
 
     
 

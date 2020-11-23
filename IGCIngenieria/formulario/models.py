@@ -4,10 +4,7 @@ from django.db import models
 from django.db import models
 from datetime import datetime
 
-# Create your models here.
 
-
-# Create your models here.
 
 class Usuario(models.Model):
         Nombre=models.CharField(max_length=50,null=True)
@@ -46,12 +43,4 @@ class ListaPrecio(models.Model):
         def __str__(self):  # metodo que se llama
             return 'Nombre :%s , Valor :%s , Descripcion :%s , Estado :%s , Actualizacion :%s' % (self.Nombre, self.Valor, self.Descripcion, self.Estado, self.Actualizacion)
 
-#usuario AdminIGC
 
-#python manager.py makemigrations
-#python manage.py sqlmigrate formulario 0001
-#python manage.py migrate
-#python manage.py runserver
-# para crear un usuarios
-#1 detener servidor
-#1 python manage.py createsuperuser

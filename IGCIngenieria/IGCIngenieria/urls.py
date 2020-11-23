@@ -22,25 +22,18 @@ from django.contrib.auth.views import (logout_then_login, LoginView,PasswordRese
 
 
 
-
+# Generamos los Path para hacer las llamadas en las url segun la vista que corresponda
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    #path('buscar_usuarios/', views.busqueda_usuario),
-    #path('buscar/', views.buscar),
+    path('admin/', admin.site.urls),   
     path('formulario/',include('formulario.urls')),
     path('contacto/', include('formulario.urls')),
     path('login', LoginView.as_view(template_name='login.html'), name='login'),
     path('accounts/login/', LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', logout_then_login, name="logout"),
-
-    #path('', LoginView.as_view(template_name='index.html'), name='index'),
-
-    #path('', formulario.views.home),
-    path('', include('formulario.urls')),
-
-    # path('',include('templates/index.html')),
-    path('oauth/', include('social_django.urls', namespace='social')),
     
+    path('', include('formulario.urls')),    
+    path('oauth/', include('social_django.urls', namespace='social')),
+        
     path('recuperaClave/',
         PasswordResetView.as_view(template_name='password_reset_form.html'),
         name='password_reset'),
