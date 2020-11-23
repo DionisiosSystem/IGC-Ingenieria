@@ -49,7 +49,10 @@ INSTALLED_APPS = [
     # 'bootstrap4',
 
     'social_django',
-
+    
+    'Api1',
+    'rest_framework',
+    'corsheaders',
 ]
 # Código que se ejecuta en cada peticion (MIDDLEWARE)
 MIDDLEWARE = [

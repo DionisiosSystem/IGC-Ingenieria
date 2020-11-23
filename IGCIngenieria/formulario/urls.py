@@ -5,6 +5,7 @@ from django.contrib.auth.views import (logout_then_login, LoginView,PasswordRese
 
 
 urlpatterns = [
+    path('', views.home),
     path('index/', views.home, name="index"),
     path('contacto/', views.contacto, name="contacto"),
     path('listadoMensajes/', views.mensajes, name="listadoMensajes"),
